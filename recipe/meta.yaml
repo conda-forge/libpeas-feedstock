@@ -11,7 +11,7 @@ source:
   sha256: 0bf5562e9bfc0382a9dcb81f64340787542568762a3a367d9d90f6185898b9a3
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -37,6 +37,7 @@ test:
     - {{ compiler('c') }}
     - pkg-config
     - glib
+    - pygobject
   commands:
     - test -f ${PREFIX}/include/libpeas-1.0/libpeas/peas.h                   # [unix]
     - test -f ${PREFIX}/lib/libpeas-1.0.dylib                                # [osx]
